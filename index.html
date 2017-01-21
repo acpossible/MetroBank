@@ -4,27 +4,44 @@
 <!--[if IE 8]>      <html lang="en" class="nojs lt-ie10 lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>      <html lang="en" class="nojs lt-ie10 ie9-or-better ie9"> <![endif]-->
 <!--[if ! IE]><!-->
-<html lang="en" ">
+<html lang="en" class="nojs ie9-or-better ie10-or-better">
 <!--<![endif]-->
 
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!
 <head>
     <meta charset="utf-8"/>
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"bac4fc8811","applicationID":"19245175","transactionName":"bwFXZkJRD0sDV00PW1ZLeGRzHyVdBFVMCkBoBVJXc18PTBBbVQpRSktcXFRVGQ==","queueTime":15,"applicationTime":37,"ttGuid":"F486EF5D7B4151A1","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+    -->
     <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="720">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <meta name="keywords" content=" Personal Banking" />
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Metro Bank Personal,Metro Bank Personal Products,Personal Products,Metro Bank Accounts,Accounts,Metro Bank,Bank Account,Metro Bank Personal Banking,Personal banking" />
     <meta name="description" content="We&#39;re the bank that&#39;s all about you. We&#39;re open when you need us - and you can pop into a store and get your account up and running straight away." />
     <link rel="shortcut icon" href="images/assets/favicon.ico">
     <title>Personal | Metro Bank</title> 
-    <link href="default.html" rel="canonical" />
+    <link href="index.html" rel="canonical" />
     
-  
+    <script type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TCJHM8');
+</script>
+ 
+    <script>document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/, 'js');</script>
+   
     <link href="Static/styles.css" rel="stylesheet" />
+
+
+
+
+
 </head>
 
-<body>
+<body data-mapkey="AIzaSyAdchFRz9gQA5OXTTTjbSwDcRy2ATxIjSI">
     <!-- accessibility skip link -->
     <a href="#skipToContent" class="u-offscreen">Skip to main content</a> 
     
@@ -41,16 +58,16 @@
                     <ul class="horizontalDragSlider-content horizontalDragSlider-content_header horizontalDragSlider-content_header_hero">
 
                             <li class="header-topNav-list-item header-topNav-list-item_hero header-topNav-list-item_current horizontalDragSlider-initial">
-                                <a class="header-topNav-list-item-link header-topNav-list-item_hero header-topNav-list-item-link_current" href="Login.html" target="">Personal</a>
+                                <a class="header-topNav-list-item-link header-topNav-list-item_hero header-topNav-list-item-link_current" href="index.html" target="">Personal</a>
                             </li>
                             <li class="header-topNav-list-item header-topNav-list-item_hero ">
-                                <a class="header-topNav-list-item-link header-topNav-list-item_hero " href="#" target="">Business</a>
+                                <a class="header-topNav-list-item-link header-topNav-list-item_hero " href="business/index.html" target="">Business</a>
                             </li>
                             <li class="header-topNav-list-item header-topNav-list-item_hero ">
-                                <a class="header-topNav-list-item-link header-topNav-list-item_hero " href="#" target="">About us</a>
+                                <a class="header-topNav-list-item-link header-topNav-list-item_hero " href="about-us/index.html" target="">About us</a>
                             </li>
                             <li class="header-topNav-list-item header-topNav-list-item_hero ">
-                                <a class="header-topNav-list-item-link header-topNav-list-item_hero " href="#" target="">Get in touch</a>
+                                <a class="header-topNav-list-item-link header-topNav-list-item_hero " href="get-in-touch/index.html" target="">Get in touch</a>
                             </li>
 
                     </ul>
@@ -59,22 +76,21 @@
             </div>
             <div class="header-topNav-util header-topNav-util_hero">
                 <div class="header-login header-login_hero">
-                   
+                    <button class="header-login-btn header-login-btn_hero js-header-loginDropdownToggle"  aria-haspopup="true" aria-expanded="false">Login<span></span></button>
                     <div class="header-login-dropdown header-login-dropdown_hero" aria-hidden="true">
-
                         <ul class="header-login-dropdown-list header-login-dropdown-list_hero">
 
                                 <li class="header-login-dropdown-item header-login-dropdown-item_hero">
-                                    <a class="header-login-dropdown-link header-login-dropdown-link_hero" href="Login.html">Personal and Business</a>
+                                    <a class="header-login-dropdown-link header-login-dropdown-link_hero" href="Login.aspx">Personal and Business</a>
                                 </li>
                                 <li class="header-login-dropdown-item header-login-dropdown-item_hero">
-                                    <a class="header-login-dropdown-link header-login-dropdown-link_hero" href="#">Business Online Plus</a>
+                                    <a class="header-login-dropdown-link header-login-dropdown-link_hero" href="https://corporate.metrobankonline.co.uk/servlet/BrowserServlet">Business Online Plus</a>
                                 </li>
                                 <li class="header-login-dropdown-item header-login-dropdown-item_hero">
-                                    <a class="header-login-dropdown-link header-login-dropdown-link_hero" href="#">Commercial Online Banking</a>
+                                    <a class="header-login-dropdown-link header-login-dropdown-link_hero" href="https://corporate.metrobankonline.co.uk/servlet/BrowserServlet">Commercial Online Banking</a>
                                 </li>
                                 <li class="header-login-dropdown-item header-login-dropdown-item_hero">
-                                    <a class="header-login-dropdown-link header-login-dropdown-link_hero" href="#">Register and Update Your Details</a>
+                                    <a class="header-login-dropdown-link header-login-dropdown-link_hero" href="https://selfservice.metrobankonline.co.uk/">Register and Update Your Details</a>
                                 </li>
                         </ul>
                     </div>
@@ -85,7 +101,7 @@
             </div>
         </div>
     </nav>
-    <form action="https://www.metrobonline.com/search/" method="GET" class="header-search header-search_hero">
+    <form action="https://www.metrobankonline.co.uk/search/" method="GET" class="header-search header-search_hero">
         <div class="header-search-inner header-search-inner_hero" aria-expanded="false">
             <label for="header-search" class="u-offscreen">Search</label>
             <input id="header-search" type="search" class="header-search-field header-search-field_hero" placeholder="Search" name="query" />
@@ -93,7 +109,7 @@
         </div>
     </form>
     <div class="header-container header-container_hero">
-        <a class="header-logo header-logo_hero" href="default.html">
+        <a class="header-logo header-logo_hero" href="index.html">
             <span class="u-offscreen">Metro Bank</span>
         </a>
         <nav class="header-nav header-nav_hero">
@@ -101,7 +117,7 @@
 
                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_1 header-nav-list-item_parent">
                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_1 header-nav-list-item-link_parent "
-                           href="#" target="">Bank accounts</a>
+                           href="bank-accounts/index.html" target="">Bank accounts</a>
 
                             <ul class="header-nav-list header-nav-link_hero header-nav-list_level_2 header-nav-list_shortList">
                                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_2 header-nav-list-item_parent header-nav-list-item_shortList">
@@ -110,7 +126,7 @@
                                         <ul class="header-nav-list header-nav-list_level_3 header-nav-list_hero">
                                                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_3">
                                                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_3 "
-                                                           href="#" target="">Current Account</a>
+                                                           href="bank-accounts/products/current-account/index.html" target="">Current Account</a>
                                                     </li>
                                         </ul>
                                     </li>
@@ -120,15 +136,15 @@
                                         <ul class="header-nav-list header-nav-list_level_3 header-nav-list_hero">
                                                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_3">
                                                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_3 "
-                                                           href="#" target="">Switching my account</a>
+                                                           href="bank-accounts/i-want-some-information-about/switching-my-account/index.html" target="">Switching my account</a>
                                                     </li>
                                                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_3">
                                                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_3 "
-                                                           href="#" target="">Using my card abroad</a>
+                                                           href="bank-accounts/i-want-some-information-about/using-my-card-abroad/index.html" target="">Using my card abroad</a>
                                                     </li>
                                                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_3">
                                                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_3 "
-                                                           href="#" target="">What I need to open a personal account</a>
+                                                           href="bank-accounts/i-want-some-information-about/what-i-need-to-open-a-personal-account/index.html" target="">What I need to open a personal account</a>
                                                     </li>
                                         </ul>
                                     </li>
@@ -136,7 +152,7 @@
                     </li>
                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_1 header-nav-list-item_parent">
                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_1 header-nav-list-item-link_parent "
-                           href="#" target="">Savings</a>
+                           href="savings/index.html" target="">Savings</a>
 
                             <ul class="header-nav-list header-nav-link_hero header-nav-list_level_2 header-nav-list_shortList">
                                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_2 header-nav-list-item_parent header-nav-list-item_shortList">
@@ -191,7 +207,7 @@
                     </li>
                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_1 header-nav-list-item_parent">
                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_1 header-nav-list-item-link_parent "
-                           href="#" target="">Borrowing</a>
+                           href="borrowing/index.html" target="">Borrowing</a>
 
                             <ul class="header-nav-list header-nav-link_hero header-nav-list_level_2 header-nav-list_shortList">
                                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_2 header-nav-list-item_parent header-nav-list-item_shortList">
@@ -230,7 +246,7 @@
                     </li>
                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_1 header-nav-list-item_parent">
                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_1 header-nav-list-item-link_parent "
-                           href="#" target="">Mortgages</a>
+                           href="mortgages/index.html" target="">Mortgages</a>
 
                             <ul class="header-nav-list header-nav-link_hero header-nav-list_level_2 header-nav-list_shortList">
                                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_2 header-nav-list-item_parent header-nav-list-item_shortList">
@@ -273,12 +289,12 @@
                     </li>
                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_1 ">
                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_1  "
-                           href="#" target="">Safe Deposit Boxes</a>
+                           href="safe-deposit-boxes/index.html" target="">Safe Deposit Boxes</a>
 
                     </li>
                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_1 header-nav-list-item_parent">
                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_1 header-nav-list-item-link_parent "
-                           href="#" target="">Ways to bank</a>
+                           href="ways-to-bank/index.html" target="">Ways to bank</a>
 
                             <ul class="header-nav-list header-nav-link_hero header-nav-list_level_2 header-nav-list_shortList">
                                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_2 header-nav-list-item_parent header-nav-list-item_shortList">
@@ -313,7 +329,7 @@
                     </li>
                     <li class="header-nav-list-item header-nav-list-item_hero header-nav-list-item_level_1 ">
                         <a class="header-nav-list-item-link header-nav-list-item-link_hero header-nav-list-item-link_level_1  "
-                           href="Login.html" target="">Private Banking</a>
+                           href="private-banking/index.html" target="">Private Banking</a>
 
                     </li>
 
@@ -340,7 +356,7 @@
             
 
     <div  class="hero-cta hero-cta_blue">
-        <a class="hero-cta-link" href="#">Find a store</a>
+        <a class="hero-cta-link" href="get-in-touch/store-locator/index.html">Find a store</a>
     </div>
 
 
@@ -404,7 +420,7 @@
     
 
     <div  class="contentBlock-cta contentBlock_default-cta">
-        <a class="contentBlock-cta-link contentBlock_default-cta-link" href="#">Current Accounts</a>
+        <a class="contentBlock-cta-link contentBlock_default-cta-link" href="bank-accounts/index.html">Current Accounts</a>
     </div>
 
 </div></div><div class="l-cell l-cell_size_33">
@@ -427,7 +443,7 @@
     
 
     <div  class="contentBlock-cta contentBlock_default-cta">
-        <a class="contentBlock-cta-link contentBlock_default-cta-link" href="#">Opening an account</a>
+        <a class="contentBlock-cta-link contentBlock_default-cta-link" href="bank-accounts/i-want-some-information-about/what-i-need-to-open-a-personal-account/index.html">Opening an account</a>
     </div>
 
 </div></div><div class="l-cell l-cell_size_33">
@@ -450,7 +466,7 @@
     
 
     <div  class="contentBlock-cta contentBlock_default-cta">
-        <a class="contentBlock-cta-link contentBlock_default-cta-link" href="#">Business banking</a>
+        <a class="contentBlock-cta-link contentBlock_default-cta-link" href="business/index.html">Business banking</a>
     </div>
 
 </div></div></div></div><div class='l-row l-row_size_'><div class="l-cell l-cell_size_100">
@@ -464,12 +480,42 @@
                 </div>
             </div>
             <div class="messageBlock-buttons" >
-                            <a  href="#" class="btn btn_red">About Metro Bank</a>
+                            <a  href="about-us/index.html" class="btn btn_red">About Metro Bank</a>
             </div>
         </div>
     </div>
 </div></div></div><div class='l-row l-row_size_'><div class="l-cell l-cell_size_100">
-</div></div><div class='l-container-wrap'><div class='l-row l-row_size_100'><div class="l-cell l-cell_size_100">
+<div class="l-container-wrap">
+    <div class="map" id="" data-url="/api/location/getlocationlist/" data-options="mapType=nearest,directions=true,geolocate=true,initLat=51.5178071,initLng=-0.1209802,userLat=51.5178071,userLng=-0.1209802,search=false,zoom=15,dfltLat=51.5176895323032,dfltLng=-0.120651125907898">
+        <p>Please wait while map is configured.</p>
+        <fieldset class="map-view-switch">
+            <legend class="u-offscreen">Toggle between map and list views</legend>
+            <input type="radio" class="radioSwitch-radio" name="mobile-views" id="mapview" value="map" checked>
+            <label class="radioSwitch-label radioSwitch-label_first" for="mapview">Map view</label>
+            <input type="radio" class="radioSwitch-radio" name="mobile-views" id="listview" value="list">
+            <label class="radioSwitch-label radioSwitch-label_last" for="listview">List view</label>
+        </fieldset>
+        <div class="map-wrapper">
+            <div class="map-buttons-overlay">
+                <a class="find-store" href="get-in-touch/store-locator/index.html">Find Store</a>
+                <div class="map-zoom">
+                    <button class="zoomin" aria-label="Zoom in"><span class="u-offscreen">Zoom in</span></button>
+                    <button class="zoomout" aria-label="Zoom out"><span class="u-offscreen">Zoom out</span></button>
+                </div>
+            </div>
+            <div class="map-inset">
+                <div class="info" aria-label="Nearest Store Information">
+                    <section class="infocard">
+                        <p class="section-heading"></p>
+                        <div></div>
+                        <button class="store_directions">Get Directions</button>
+                    </section>
+                </div>
+            </div>
+            <div class="map-container" tab-index="0" aria-label="Map showing visual representation of Nearest Store Information"></div>
+        </div>
+    </div>
+</div></div></div><div class='l-container-wrap'><div class='l-row l-row_size_100'><div class="l-cell l-cell_size_100">
 <div class="contentBlock contentBlock_default">
     <div class="contentBlock_default-content">
         <div class="contentBlock_default-imgContainer mask_none" title="7-day Switch Guarantee">
@@ -489,7 +535,7 @@
     
 
     <div  class="contentBlock-cta contentBlock_default-cta">
-        <a class="contentBlock-cta-link contentBlock_default-cta-link" href="#">Switch to us</a>
+        <a class="contentBlock-cta-link contentBlock_default-cta-link" href="bank-accounts/i-want-some-information-about/switching-my-account/index.html">Switch to us</a>
     </div>
 
 </div></div></div></div></div>
@@ -500,37 +546,37 @@
         <div class="footer-primaryLinksContainer">
             <ul class="footer-primaryLinks" >
                     <li class="item">
-                        <a class="text" href="#"><span>Store Locator</span></a>
+                        <a class="text" href="get-in-touch/store-locator/index.html"><span>Store Locator</span></a>
                     </li>
                     <li class="item">
-                        <a class="text" href="#"><span>Careers</span></a>
+                        <a class="text" href="about-us/careers/index.html"><span>Careers</span></a>
                     </li>
                     <li class="item">
-                        <a class="text" href="#"><span>Press</span></a>
+                        <a class="text" href="about-us/press-releases/index.html"><span>Press</span></a>
                     </li>
                     <li class="item">
-                        <a class="text" href="#"><span>Mortgage Intermediaries</span></a>
+                        <a class="text" href="intermediaries-landing/index.html"><span>Mortgage Intermediaries</span></a>
                     </li>
                     <li class="item">
-                        <a class="text" href="#"><span>Investor Relations</span></a>
+                        <a class="text" href="about-us/investor-relations/index.html"><span>Investor Relations</span></a>
                     </li>
             </ul>
             <div class="footer-socialMediaContainer">
                 <ul class="footer-socialMedia" >
                         <li class="footer-socialMedia-item">
-                            <a href="#" class="footer-socialMedia-icon" target="_blank">
+                            <a href="https://www.linkedin.com/company/metro-bank-uk-" class="footer-socialMedia-icon" target="_blank">
 
     <img src='contentassets/ff293d4616ff4ed084f0f6c1c77f5a13/social-media/linkedin.png' alt='Linkedin' class="footer-socialMedia-image" />
 </a>
                         </li>
                         <li class="footer-socialMedia-item">
-                            <a href="#" class="footer-socialMedia-icon" target="_blank">
+                            <a href="http://www.twitter.com/Metro_Bank" class="footer-socialMedia-icon" target="_blank">
 
     <img src='contentassets/ff293d4616ff4ed084f0f6c1c77f5a13/social-media/icon-twitter.png' alt='Twitter' class="footer-socialMedia-image" />
 </a>
                         </li>
                         <li class="footer-socialMedia-item">
-                            <a href="#" class="footer-socialMedia-icon" target="_blank">
+                            <a href="https://www.youtube.com/user/MetroBankChannel" class="footer-socialMedia-icon" target="_blank">
 
     <img src='contentassets/ff293d4616ff4ed084f0f6c1c77f5a13/social-media/icon-youtube.png' alt='YouTube' class="footer-socialMedia-image" />
 </a>
@@ -540,7 +586,7 @@
         </div>
         <div class="footer-smallPrint">
             <div class="wysiwyg">
-                <p class="wysiwyg-text-small">Your eligible deposits with Metro Bank PLC are protected up to a total of £75,000 by the Financial Services Compensation Scheme, the UK's deposit guarantee scheme. Any deposits you hold above the limit are unlikely to be covered. Download the brochure <a title="How FSCS protects your money" href="#">‘How FSCS protects your money (1.72MB)’</a> or for further information visit <a title="FSCS Website" href="#">www.fscs.org.uk</a>.</p>
+                <p class="wysiwyg-text-small">Your eligible deposits with Metro Bank PLC are protected up to a total of £75,000 by the Financial Services Compensation Scheme, the UK's deposit guarantee scheme. Any deposits you hold above the limit are unlikely to be covered. Download the brochure <a title="How FSCS protects your money" href="globalassets/legal-information/fscs_2015_online-leaflet.pdf">‘How FSCS protects your money (1.72MB)’</a> or for further information visit <a title="FSCS Website" href="http://www.fscs.org.uk/">www.fscs.org.uk</a>.</p>
 <p class="wysiwyg-text-small">Metro Bank PLC. Registered in England and Wales. Company number: 6419578. Registered office: One Southampton Row, London, WC1B 5HA. We are authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and Prudential Regulation Authority. Metro Bank PLC is an independent UK Bank - it is not affiliated with any other bank or organisation (including the METRO newspaper or its publishers) anywhere in the world. "Metrobank" is the registered trademark of Metro Bank PLC.</p>
             </div>
         </div>
@@ -579,13 +625,13 @@
         <div class="footer-secondaryLinksContainer">
             <ul class="footer-secondaryLinks" >
                     <li class="item">
-                        <a class="text" href="#">Accessibility</a>
+                        <a class="text" href="about-us/accessibility/index.html">Accessibility</a>
                     </li>
                     <li class="item">
-                        <a class="text" href="#">Legal Information</a>
+                        <a class="text" href="about-us/legal-information/index.html">Legal Information</a>
                     </li>
                     <li class="item">
-                        <a class="text" href="#">Privacy and Security</a>
+                        <a class="text" href="about-us/privacy-and-security/index.html">Privacy and Security</a>
                     </li>
             </ul>
 
@@ -596,5 +642,71 @@
     </div>
 </footer>    </div>
     
-</body>
+<noscript>
+	<img src="util/LiveMonitor/Tracking/Indexe140.gif?contentId=6&amp;languageId=en" alt="" style="display:none" />
+</noscript>
+
+<script type="text/javascript">
+void(function(){var tUrl = "util/LiveMonitor/Tracking/Indexe140.gif?contentId=6&amp;languageId=en";tUrl += (tUrl.indexOf("?") > 0 ? "&" : "?");var tUrl1 = tUrl + "r=" + Math.random() + "&referrer=" + escape(document.referrer);document.write("<img id='LiveMonTransparentImage' src='" + tUrl1 + "' alt='' width='1' height='1'/>");window.onpageshow = function (ev) {if (ev && ev.persisted){document.getElementById("LiveMonTransparentImage").src = tUrl + "r=" + Math.random() + "&referrer=" + escape(document.referrer);}}}());
+</script>
+
+    <script src="Scripts/app.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+            var hash = window.location.hash;
+            if (hash) {
+
+                var accordianId = _getAccordianId(hash);
+
+                if (accordianId) {
+                    var linkSelector = "div.tabsAccordion ul.tabsAccordion-nav a[href='#" + accordianId + "']";
+                    var link = $(linkSelector);
+
+                    if (link) {
+                        link.click();
+                    }
+                }
+
+                /*var item = $(selector);
+
+                if (item) {
+
+                    var parentItem = item.parent();
+                    if (parentItem) {
+                        var parentId = parentItem.data("id");
+
+                        var linkSelector = "div.tabsAccordion ul.tabsAccordion-nav a[href='#" + parentId + "']";
+                        var link = $(linkSelector);
+
+                        if (link) {
+                            link.click();
+                        }
+
+                    }
+
+                }*/
+            }
+        });
+
+        function _getAccordianId(hash) {
+            var selector = "div.tabsAccordion h2" + hash;
+
+            return $(selector).parent().data("id");
+        }
+    </script>
+    
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '_Incapsula_Resourceacdd?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&amp;ns=2';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script></body>
+
+
 </html>
