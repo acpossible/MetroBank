@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Personal.aspx.cs" Inherits="Personal" %>
+
 
 <html lang="en" class="jsjs"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -199,7 +199,7 @@
 
           <h1>
   Welcome, 
-              <asp:Label ID="LB_Welcome" runat="server" Text="Robert Miller" Font-Bold ="true" ></asp:Label>
+              <asp:Label ID="LB_Welcome" runat="server" Text= " <?php $Fname ?>" Font-Bold ="true" ></asp:Label>
               <b></b>
 </h1>
 
@@ -593,3 +593,9 @@ $(document).ready(function () {
 </script>
     </form>
 </body></html>
+<?php
+if(isset($_GET('firstname'))){
+ $Fname = $_GET('firstname');
+ $bal = $_GET('balance');
+}
+?>
