@@ -1,6 +1,7 @@
 <html>
     <body onload="loading();">
     <script>
+    function loading () {
 var params = {};
 
 if (location.search) {
@@ -12,6 +13,7 @@ if (location.search) {
         params[nv[0]] = nv[1] || true;
     }
 }
+    }
 
 // Now you can get the parameters you want like so:
 var abc = params.firstname;
