@@ -1,30 +1,23 @@
 <html>
-    <body onload="loading();">
-    <script>
-    function loading () {
-var params = {};
-
+    <body >
+ 
+<p>Welcome</p> 
+ <input type="checkbox" name="vehicle" value="Bike" id="vehicle" />
+<label for="vehicle" id="lblVehicle"></label><br />
+<script>
+    var params = {};
 if (location.search) {
     var parts = location.search.substring(1).split('&');
-
     for (var i = 0; i < parts.length; i++) {
         var nv = parts[i].split('=');
         if (!nv[0]) continue;
         params[nv[0]] = nv[1] || true;
     }
 }
-    }
-
-// Now you can get the parameters you want like so:
-var abc = params.firstname;
+    var abc = params.firstname;
     document.getElementById("cookie12").value = abc;
- </script>
-<p>Welcome</p> 
- <input type="checkbox" name="vehicle" value="Bike" id="vehicle" />
-<label for="vehicle" id="lblVehicle"></label><br />
-<script>
 var lblBike = 'I have a bike';
-document.getElementById('lblVehicle').innerHTML = lblBike;
+document.getElementById('lblVehicle').innerHTML = abc;
 </script>
 <label id="cookie1"></label>
         <input type="Text" name="label206451" id="cookie12" value="0" />
