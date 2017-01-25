@@ -1,4 +1,5 @@
 <html>
+    <script>
 function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
@@ -6,9 +7,12 @@ function getUrlVars() {
       vars[key] = value;
     });
     return vars;
-  }
+} 
+         var fType = getUrlVars()["firstname"];
+    
+ </script>
 <p>Welcome</p> 
-  var fType = getUrlVars()["firstname"];
+ 
 <label>fType</label>
 
 </html>
