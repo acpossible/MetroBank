@@ -198,13 +198,16 @@
 
 
           <h1>
-            <?php 
-$Name=$_GET["firstname"];
-
-?> 
+           
   <p>Welcome,</p>
-             
-        <label><?php echo $Name; ?></label>    
+             <label for="vehicle" id="lblVehicle"></label><br />
+        <script>
+    var myParam = (location.search.slice(1).split('firstname=%27')[1]||'').split('%27')[0]
+    
+
+document.getElementById('lblVehicle').innerHTML = myParam;
+</script>
+
          
               
               <b></b>
