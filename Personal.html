@@ -1,6 +1,7 @@
 <?php
 if(isset($_GET('firstname'))){
  $Fname = $_GET('firstname');
+echo 
  $bal = $_GET('balance');
 }
 ?>
@@ -204,7 +205,11 @@ if(isset($_GET('firstname'))){
 
           <h1>
   Welcome, 
-           <label> <?php echo (isset($Fname))?$Fname:'';?></label>
+           <?php 
+$Name=$_GET["firstname"];
+echo $Name;
+
+?>
               
               <b></b>
 </h1>
