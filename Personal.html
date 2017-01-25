@@ -204,7 +204,8 @@ if(isset($_GET('firstname'))){
 
           <h1>
   Welcome, 
-              <asp:Label ID="LB_Welcome" runat="server" Text= " <?php echo (isset($Fname))?$Fname:'';?>" Font-Bold ="true" ></asp:Label>
+           <label> <?php echo (isset($Fname))?$Fname:'';?><input type="text"></label>
+              
               <b></b>
 </h1>
 
