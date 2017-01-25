@@ -1,10 +1,14 @@
 <html>
-
-<p>Welcome</p> <?php 
-$Name=$_GET["firstname"];
-
-
-?>
-<label><?php echo $Name; ?></label>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+    function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+<p>Welcome</p> 
+  var fType = getUrlVars()["firstname"];
+<label>fType</label>
 
 </html>
