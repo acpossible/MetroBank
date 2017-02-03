@@ -202,10 +202,23 @@
   <p>Welcome, <label for="vehicle" id="lblVehicle"></label><br /></p>
              
         <script>
+          function getParam( name )
+{
+ name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+ var regexS = "[\\?&]"+name+"=([^&#]*)";
+ var regex = new RegExp( regexS );
+ var results = regex.exec( window.location.href );
+ if( results == null )
+  return "";
+else
+ return results[1];
+}
+
+var f_param = getParam( 'firstname' );
     var myParam = (location.search('firstname')
     
 
-document.getElementById('lblVehicle').innerHTML = myParam;
+document.getElementById('lblVehicle').innerHTML = f_param;
 </script>
 
          
